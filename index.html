@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ashok Neupane - Full Stack Developer</title>
   <style>
     body {
@@ -13,9 +13,15 @@
       text-align: center;
     }
 
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     h1 {
-      font-size: 1.5em;
+      font-size: 2em;
       margin: 20px 0;
     }
 
@@ -95,6 +101,7 @@
       border-bottom: 1px solid rgb(75, 74, 74);
       color: rgb(218, 214, 5);
       font-size: 1.2rem;
+    
     }
 
     .experience-table th {
@@ -102,25 +109,25 @@
       border-radius: 40px;
     }
 
-    .marksheet-table {
+    .marksheet-section {
       width: 100%;
-      margin-top: 20px;
       background-color: rgb(12, 80, 12);
-      color: white;
       padding: 20px;
       border-radius: 8px;
-      font-size: .5rem;
-      text-align: center;
-      margin-right:2px;
+      margin-top: 20px;
+      box-sizing: border-box;
     }
 
-    .marksheet-table th{
-      padding: 12px;
-      font-size:2.5em;
-      align-items: center;
-      margin:1px;
-      margin-right:2px;
+    .marksheet-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      color: white;
     }
+
+    .marksheet-table th,
     .marksheet-table td {
       padding: 12px;
       text-align: center;
@@ -130,7 +137,6 @@
 
     .marksheet-table th {
       background-color: rgb(6, 49, 1);
-      border-radius: 8px;
     }
 
     footer {
@@ -306,56 +312,58 @@
       </table>
     </div>
 
-    <div style="background-color: rgb(2, 66, 2); padding: 10px; color: white; text-align: center;">
-      <h2>My MarkSheet for MERN STACK:</h2>
-      <table class="marksheet-table">
-        <thead>
-          <tr style="background-color: #034d22;">
-            <th>Subject</th>
-            <th>Mark</th>
-            <th>Percentage</th>
-            <th>Completed Projects</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>JavaScript</td>
-            <td>99</td>
-            <td>99</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td>HTML</td>
-            <td>97</td>
-            <td>97</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-            <td>97</td>
-            <td>97</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td>React</td>
-            <td>97</td>
-            <td>97</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td>Node JS</td>
-            <td>97</td>
-            <td>97</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td>MongoDB</td>
-            <td>97</td>
-            <td>97</td>
-            <td>300</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="marksheet-section">
+      <h3 style="text-align: center;">My MarkSheet for MERN STACK:</h3>
+      <div style="overflow-x: auto;">
+        <table class="marksheet-table">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Mark</th>
+              <th>Percentage</th>
+              <th>Completed Projects</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>JavaScript</td>
+              <td>99</td>
+              <td>99%</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td>97</td>
+              <td>97%</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>97</td>
+              <td>97%</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td>React</td>
+              <td>97</td>
+              <td>97%</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td>Node JS</td>
+              <td>97</td>
+              <td>97%</td>
+              <td>300</td>
+            </tr>
+            <tr>
+              <td>MongoDB</td>
+              <td>97</td>
+              <td>97%</td>
+              <td>300</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <footer>
