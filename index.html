@@ -14,8 +14,6 @@
     }
 
     .container {
-      max-width: 900px;
-      margin: 0 auto;
       padding: 20px;
       background-color: rgb(238, 210, 210);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -116,27 +114,28 @@
 
     .marksheet-table {
       width: 100%;
-      border: 1px solid rgb(75, 74, 74);
-      border-collapse: collapse;
       margin-top: 20px;
+      background-color: rgb(12, 80, 12);
+      color: white;
+      padding: 20px;
+      border-radius: 8px; /* Adjusted border radius */
+      font-size: 1rem;
+      display: block;
     }
 
     .marksheet-table th,
     .marksheet-table td {
       padding: 12px;
       text-align: center;
-      border-bottom: 1px solid rgb(75, 74, 74);
+      border-bottom: none; /* Removed border-bottom */
       color: white;
       font-size: 1rem;
-      border-radius:50px;
     }
 
     .marksheet-table th {
       font-style: italic;
       font-weight: bold;
       background-color: rgb(6, 49, 1);
-      
-      
       border-radius: 8px; /* Added border radius */
     }
 
@@ -313,24 +312,13 @@
       </table>
     </div>
 
-    <div class="section">
-      <div
-        style="
-          background-color: rgb(12, 80, 12);
-          color: white;
-          padding: 20px;
-          border-radius: 50px;
-          font-size: 1rem;
-          overflow-x: auto; /* Added overflow property */
-        "
-      >
-        <h3>My Marksheet:</h3>
+    
+  </div>
+  <div>
+    <div style="background-color: rgb(1, 51, 1);padding-top: 10px; color:white">
+      <h3>My Marksheet:</h3>
+      <div class="marksheet-table-wrapper">
         <table class="marksheet-table">
-          <tr>
-            <th colspan="4">
-              Subjects and marks obtained in the programming major:
-            </th>
-          </tr>
           <tr>
             <th>Subject</th>
             <th>Mark</th>
@@ -368,8 +356,9 @@
             <td>200</td>
           </tr>
         </table>
-      </div>
     </div>
+  </div>
+
   </div>
 
   <footer>
