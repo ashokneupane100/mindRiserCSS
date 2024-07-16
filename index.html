@@ -1,304 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashok Neupane - Full Stack Developer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: rgb(250, 252, 252);
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashok Neupane - Full Stack Developer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(250, 252, 252);
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: rgb(238, 210, 210);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      text-align: left;
-    }
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgb(238, 210, 210);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: left;
+      }
 
-    h1 {
-      font-size: 2em;
-      margin: 20px 0;
-      text-align: center;
-    }
+      h1 {
+        font-size: 2em;
+        margin: 20px 0;
+        text-align: center;
+      }
 
-    h2,
-    h3 {
-      font-size: 1.5em;
-      margin: 10px 0;
-      text-align: center;
-    }
+      h2,
+      h3 {
+        font-size: 1.5em;
+        margin: 10px 0;
+        text-align: center;
+      }
 
-    p {
-      font-size: 1em;
-      margin: 10px 0;
-      text-align: center;
-    }
+      p {
+        font-size: 1em;
+        margin: 10px 0;
+        text-align: center;
+      }
 
-    hr {
-      border: none;
-      height: 2px;
-      background-color: rgb(75, 74, 74);
-      margin: 20px auto;
-      max-width: 50%;
-    }
+      hr {
+        border: none;
+        height: 2px;
+        background-color: rgb(75, 74, 74);
+        margin: 20px auto;
+        max-width: 50%;
+      }
 
-    .section {
-      background-color: rgb(159, 159, 206);
-      padding: 20px;
-      border-radius: 50px;
-      margin-bottom: 40px;
-    }
+      .section {
+        background-color: rgb(159, 159, 206);
+        padding: 20px;
+        border-radius: 50px;
+        margin-bottom: 40px;
+      }
 
-    .section-content {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 20px;
-    }
+      .section-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 20px;
+      }
 
-    .section-content > div {
-      flex: 1;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+      @media (min-width: 768px) {
+        .section-content {
+          flex-direction: row;
+        }
+      }
 
-    .hobbies ul,
-    .routine ul {
-      font-size: 2.2em;
-      font-weight: bold;
-      padding: 0;
-      margin-top: 10px;
-      padding-left: 20px;
-    }
+      .section-content > div {
+        flex: 1;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
-    .hobbies ul li,
-    .routine ul li {
-      padding-left: 30px;
-      position: relative;
-      font-size:2rem;
-    }
+      .hobbies ul,
+      .routine ul {
+        font-size: 1.2em; /* Increased font size */
+        font-weight: bold;
+        padding: 0;
+        margin-top: 10px;
+        padding-left: 20px;
+        list-style: none;
+      }
 
-    .hobbies ul li::before,
-    .routine ul li::before {
-      position: absolute;
-      left: 0;
-      color: rgb(48, 47, 47);
-    }
+      .hobbies ul li,
+      .routine ul li {
+        padding-left: 30px;
+        position: relative;
+      }
 
-    .experience-table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: black;
-      margin-top: 20px;
-    }
+      .experience-table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: black;
+        margin-top: 20px;
+      }
 
-    .experience-table th,
-    .experience-table td {
-      padding: 12px;
-      text-align: center;
-      border-bottom: 1px solid rgb(75, 74, 74);
-      color: rgb(218, 214, 5);
-      font-size: 1.5rem;
-    }
+      .experience-table th,
+      .experience-table td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid rgb(75, 74, 74);
+        color: rgb(218, 214, 5);
+        font-size: 1.2rem;
+      }
 
-    .experience-table th {
-      background-color: rgb(63, 62, 62);
-      border-radius: 40px;
-    }
+      .experience-table th {
+        background-color: rgb(63, 62, 62);
+        border-radius: 40px;
+      }
 
-    .marksheet-table {
-      border: 1px solid rgb(75, 74, 74);
-      border-collapse: collapse;
-      margin-top: 20px;
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 20px;
-    }
+      .marksheet-table {
+        border: 1px solid rgb(75, 74, 74);
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+      }
 
-    .marksheet-table th,
-    .marksheet-table td {
-      padding: 12px;
-      text-align: center;
-      border-bottom: 1px solid rgb(75, 74, 74);
-      color: white;
-      font-size: 1.rem;
-    }
+      .marksheet-table th,
+      .marksheet-table td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid rgb(75, 74, 74);
+        color: white;
+        font-size: 1rem;
+      }
 
-    .marksheet-table th {
-      font-style: italic;
-      font-weight: bold;
-    }
+      .marksheet-table th {
+        font-style: italic;
+        font-weight: bold;
+      }
 
-    footer {
-      background-color: rgb(48, 47, 47);
-      color: white;
-      padding: 20px;
-      margin-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+      footer {
+        background-color: rgb(48, 47, 47);
+        color: white;
+        padding: 20px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
 
-    footer a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      transition: all 0.3s ease;
-    }
+      footer a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+      }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
+      footer a:hover {
+        text-decoration: underline;
+      }
 
+      @media (min-width: 768px) {
+        footer {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div style="display: flex; justify-content: center">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1661766467407-02736e052cdf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="ocean"
+          height="200px"
+          width="200px"
+          style="border-radius: 50%"
+        />
+      </div>
 
-  <div class="container">
-    <div style="display: flex; align-items: center; justify-content: center;">
-      <img src="https://plus.unsplash.com/premium_photo-1661766467407-02736e052cdf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="ocean" height="200px" width="200px" style="border-radius: 50%;">
-    </div>
+      <h1>Hi, I'm Ashok Neupane</h1>
+      <h2>Full Stack MERN Developer from <em>Mindrisers Inc</em></h2>
+      <h3><strong>From Kathmandu, Nepal</strong></h3>
+      <p>
+        <strong><a href="contact.html" target="_blank">Contact Me</a></strong>
+      </p>
+      <hr />
 
-    <h1>Hi, I'm Ashok Neupane</h1>
-    <h2>Full Stack MERN Developer from <em>Mindrisers Inc</em></h2>
-    <h3><strong>From Kathmandu, Nepal</strong></h3>
-    <p><strong><a href="contact.html" target="_blank">Contact Me</a></strong></p>
-    <hr>
+      <div style="text-align: center">
+        <span
+          style="
+            display: inline-block;
+            background-color: rgb(3, 3, 75);
+            color: white;
+            padding: 20px;
+            border-radius: 40px;
+            font-size: 1.5rem;
+          "
+        >
+          <em
+            >Learn MERN, it's the future of the World Wide Web;<br /><br />Starting
+            from the ground up:<br /><br />
+            1. HTML
+            <br /><br />
+            2. CSS
+          </em>
+        </span>
+      </div>
+      <hr />
 
-    <div style="text-align: center;">
-      <span style="display: inline-block; background-color: rgb(3, 3, 75); color: white; padding: 20px; border-radius: 40px; font-size: 1.5rem;">
-        <em>Learn MERN, it's the future of the World Wide Web</em>
-      </span>
-    </div>
+      <div style="text-align: center; font-size: 1.4rem; font-weight: bold">
+        Days of CSS practice:
+      </div>
 
-    <hr>
+      <div style="text-align: center; margin-top: 20px">
+        <a
+          href="./day1.html"
+          style="
+            display: inline-block;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0 10px;
+            background-color: green;
+            color: rgb(240, 243, 240);
+            cursor: pointer;
+            padding: 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+          "
+          >Click For Day 1</a
+        >
+        <a
+          href=""
+          style="
+            display: inline-block;
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 0 10px;
+            background-color: rgb(66, 0, 128);
+            color: rgb(240, 243, 240);
+            cursor: pointer;
+            padding: 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+          "
+          >Click For Day 2</a
+        >
+      </div>
 
-    <div class="section">
-      <div class="section-content">
-        <div>
-          <h2>My Hobbies</h2>
-          <ul class="hobbies">
-            <div style="font-size: 1.5rem;align-items: center;">
-            <li>Coding</li>
-            <li>Problem-Solving</li>
-            <li>Reading</li>
+      <br />
+      <div class="section">
+        <div class="section-content">
+          <div>
+            <h2>My Hobbies</h2>
+            <ul class="hobbies">
+              <li style="font-size: 1.6em">Coding</li>
+              <li style="font-size: 1.6em">Problem-Solving</li>
+              <li style="font-size: 1.6em">Reading</li>
+            </ul>
           </div>
-
-          </ul>
-        </div>
-        <div>
-          <h2>My Routine</h2>
-          <div style="font-size: 1.5rem;align-items: center;">
-          <ul class="routine">
-            <li>Coding</li>
-            <li>Designing Business</li>
-            <li>Creating Database</li>
-            <li>Sleeping</li>
-          </ul>
+          <div>
+            <h2>My Routine</h2>
+            <ul class="routine">
+              <li style="font-size: 1.6em">Coding</li>
+              <li style="font-size: 1.6em">Designing Business</li>
+              <li style="font-size: 1.6em">Creating Database</li>
+              <li style="font-size: 1.6em">Sleeping</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="section">
-      <h3>My Experience</h3>
-      <table class="experience-table">
-        <tr>
-          <th>Subject</th>
-          <th>Rating</th>
-        </tr>
-        <tr>
-          <td>JavaScript</td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td>MongoDB</td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td>Express JS</td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td>HTML</td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td>CSS</td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td>React</td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-        <tr>
-          <td>NodeJS</td>
-          <td>⭐⭐⭐⭐</td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="section">
-      <div style="background-color: rgb(12, 80, 12); color: white; padding: 20px; border-radius: 50px;font-size: 1rem; padding: 1.3rem;">
-        <h3>My Marksheet:</h3>
-        <table class="marksheet-table">
-          <tr>
-            <th colspan="4">Subjects and marks obtained in the programming major</th>
-          </tr>
+      <div class="section">
+        <h3>My Experience</h3>
+        <table class="experience-table">
           <tr>
             <th>Subject</th>
-            <th>Mark</th>
-            <th>Percentage</th>
-            <th>Completed Projects</th>
+            <th>Rating</th>
           </tr>
           <tr>
             <td>JavaScript</td>
-            <td>90</td>
-            <td>90%</td>
-            <td>108</td>
+            <td>⭐⭐⭐⭐</td>
           </tr>
           <tr>
             <td>MongoDB</td>
-            <td>99</td>
-            <td>99%</td>
-            <td>67</td>
+            <td>⭐⭐⭐⭐</td>
           </tr>
           <tr>
             <td>Express JS</td>
-            <td>95</td>
-            <td>95%</td>
-            <td>94</td>
+            <td>⭐⭐⭐⭐</td>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>⭐⭐⭐⭐</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>⭐⭐⭐⭐</td>
           </tr>
           <tr>
             <td>React</td>
-            <td>99</td>
-            <td>99%</td>
-            <td>67</td>
+            <td>⭐⭐⭐⭐</td>
           </tr>
           <tr>
-            <td>Node JS</td>
-            <td>100</td>
-            <td>100%</td>
-            <td>200</td>
+            <td>NodeJS</td>
+            <td>⭐⭐⭐⭐</td>
           </tr>
         </table>
       </div>
+
+      <div class="section">
+        <div
+          style="
+            background-color: rgb(12, 80, 12);
+            color: white;
+            padding: 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+          "
+        >
+          <h3>My Marksheet:</h3>
+          <table class="marksheet-table">
+            <tr>
+              <th colspan="4">
+                Subjects and marks obtained in the programming major
+              </th>
+            </tr>
+            <tr>
+              <th>Subject</th>
+              <th>Mark</th>
+              <th>Percentage</th>
+              <th>Completed Projects</th>
+            </tr>
+            <tr>
+              <td>JavaScript</td>
+              <td>90</td>
+              <td>90%</td>
+              <td>108</td>
+            </tr>
+            <tr>
+              <td>MongoDB</td>
+              <td>99</td>
+              <td>99%</td>
+              <td>67</td>
+            </tr>
+            <tr>
+              <td>Express JS</td>
+              <td>95</td>
+              <td>95%</td>
+              <td>94</td>
+            </tr>
+            <tr>
+              <td>React</td>
+              <td>99</td>
+              <td>99%</td>
+              <td>67</td>
+            </tr>
+            <tr>
+              <td>Node JS</td>
+              <td>100</td>
+              <td>100%</td>
+              <td>200</td>
+            </tr>
+          </table>
+        </div>
+      </div>
     </div>
 
-  </div>
-
-  <footer>
-    <p>&copy; 2024 Ashok Neupane. All Rights Reserved.</p>
-    <a href="./contact.html">Contact Me</a>
-    <a href="./privacyPolicy.html">Privacy Policy</a>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2024 Ashok Neupane. All Rights Reserved.</p>
+      <a href="./contact.html">Contact Me</a>
+      <a href="./privacyPolicy.html">Privacy Policy</a>
+    </footer>
+  </body>
 </html>

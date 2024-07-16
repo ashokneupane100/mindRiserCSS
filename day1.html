@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search The Appropriate Properties</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    /* Container styles */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    /* Media query for larger screens */
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+    }
+
+    /* Utility classes */
+    .m-5 {
+      margin: 1.25rem;
+    }
+
+    .gap-8 {
+      gap: 2rem;
+    }
+
+    .gap-7 {
+      gap: 1.75rem;
+    }
+
+    .mt-8 {
+      margin-top: 2rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .gap-2 {
+      gap: 0.5rem;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .w-5 {
+      width: 1.25rem;
+    }
+
+    .border {
+      border: 1px solid #ccc;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .p-3 {
+      padding: 0.75rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .bg-slate-700 {
+      background-color: #2d3748;
+    }
+
+    .text-slate-800 {
+      color: #2d3748;
+    }
+
+    .text-white {
+      color: white;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .image-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px; /* Rounded corners for a modern look */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+
+    .footer a img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s ease; /* Smooth hover effect */
+    }
+
+    .footer a img:hover {
+      transform: scale(1.2); /* Scale up on hover */
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    /* Custom dropdown styles */
+    select#sort_order {
+      padding: 0.35rem; /* Increased padding */
+      font-size: 1rem; /* Increased font size */
+      background-color: rgb(187, 236, 236); /* Cyan background color */
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      color: #333;
+      width: 100%; /* Full width */
+    }
+  </style>
+</head>
+<body>
+  <header class="center">
+    <h1>Search Your Favorite Homes in Kathmandu Valley</h1>
+  </header>
+
+  <div class="image-container">
+    <img src="https://media.istockphoto.com/id/1885415453/photo/house-symbol-on-speech-bubble.jpg?s=1024x1024&w=is&k=20&c=fnUTbqSk79AlTsNjWAyi3yyw_Fa6xkMIjSHwgIE0l3o=" alt="house" width="500px" height="500px"/>
+  </div>
+
+  <div class="container gap-7">
+    <div class="container m-5">
+      <form class="flex flex-col gap-8">
+        <div class="flex items-center gap-2 mt-8">
+          <label for="search" class="whitespace-nowrap font-semibold">Search Term</label>
+          <input type="text" id="search" placeholder="Search your properties ..." class="border rounded-lg p-3 w-full">
+        </div>
+
+        <div class="flex gap-2 flex-wrap items-center">
+          <label class="font-bold">Type:</label>
+          <div class="flex gap-2">
+            <input type="checkbox" id="type-all" class="w-5">
+            <span class="font-bold">Rent & Sale</span>
+          </div>
+          <div class="flex gap-2">
+            <input type="checkbox" id="type-rent" class="w-5">
+            <span class="font-bold">Rent</span>
+          </div>
+          <div class="flex gap-2">
+            <input type="checkbox" id="type-sale" class="w-5">
+            <span class="font-bold">Sale</span>
+          </div>
+          <div class="flex gap-2">
+            <input type="checkbox" id="type-offer" class="w-5">
+            <span class="font-bold">Offer</span>
+          </div>
+        </div>
+
+        <div class="flex gap-2 flex-wrap items-center">
+          <label class="font-bold">Amenities:</label>
+          <div class="flex gap-2">
+            <input type="checkbox" id="amenities-parking" class="w-5">
+            <span class="font-bold">Parking</span>
+          </div>
+          <div class="flex gap-2">
+            <input type="checkbox" id="amenities-furnished" class="w-5">
+            <span class="font-bold">Furnished</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <label class="font-bold">Sort:</label>
+          <select id="sort_order" class="border rounded-lg p-3">
+            <option value="price low to high">Price Low to High</option>
+            <option value="price high to low">Price High to Low</option>
+            <option value="latest">Latest Post</option>
+            <option value="oldest">Oldest Post</option>
+          </select>
+        </div>
+
+        <button class="bg-slate-700 text-2xl rounded-lg text-white p-3 cursor-pointer">
+            Search
+          </button>
+          
+      </form>
+    </div>
+
+    <div>
+      <h2 class="text-slate-800 text-2xl font-bold mt-8">
+        Searched Properties are Here:
+      </h2>
+      <!-- Placeholder for searched properties -->
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+      <a href="https://www.twitter.com/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter">
+      </a>
+    </div>
+    <div class="copyright">
+      &copy; 2024 Ashok Neupane; all rights reserved;
+    </div>
+  </footer>
+</body>
+</html>
