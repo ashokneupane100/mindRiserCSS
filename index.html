@@ -1,173 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashok Neupane - Full Stack Developer</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: rgb(250, 252, 252);
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    h1 {
-      font-size: 2em;
-      margin: 20px 0;
-    }
-
-    h2,
-    h3 {
-      font-size: 1.5em;
-      margin: 10px 0;
-    }
-
-    p {
-      font-size: 1em;
-      margin: 10px 0;
-    }
-
-    hr {
-      border: none;
-      height: 2px;
-      background-color: rgb(75, 74, 74);
-      margin: 20px auto;
-      max-width: 50%;
-    }
-
-    .section {
-      background-color: rgb(159, 159, 206);
-      padding: 20px;
-      border-radius: 50px;
-      margin-bottom: 40px;
-    }
-
-    .section-content {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    @media (min-width: 768px) {
-      .section-content {
-        flex-direction: row;
-      }
-    }
-
-    .section-content > div {
-      flex: 1;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .hobbies ul,
-    .routine ul {
-      font-size: 1.2em;
-      font-weight: bold;
-      padding: 0;
-      margin-top: 10px;
-      padding-left: 20px;
-      list-style: none;
-    }
-
-    .hobbies ul li,
-    .routine ul li {
-      padding-left: 30px;
-      position: relative;
-    }
-
-    .experience-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background-color: black;
-    }
-
-    .experience-table th,
-    .experience-table td {
-      padding: 12px;
-      text-align: center;
-      border-bottom: 1px solid rgb(75, 74, 74);
-      color: rgb(218, 214, 5);
-      font-size: 1.2rem;
-    
-    }
-
-    .experience-table th {
-      background-color: rgb(63, 62, 62);
-      border-radius: 40px;
-    }
-
-    .marksheet-section {
-      width: 100%;
-      background-color: rgb(12, 80, 12);
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 20px;
-      box-sizing: border-box;
-    }
-
-    .marksheet-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      color: white;
-    }
-
-    .marksheet-table th,
-    .marksheet-table td {
-      padding: 12px;
-      text-align: center;
-      color: white;
-      font-size: 1.2rem;
-    }
-
-    .marksheet-table th {
-      background-color: rgb(6, 49, 1);
-    }
-
-    footer {
-      background-color: rgb(48, 47, 47);
-      color: white;
-      padding: 20px;
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      transition: all 0.3s ease;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (min-width: 768px) {
-      footer {
-        flex-direction: row;
-        justify-content: space-between;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -184,9 +21,7 @@
     <h1>Hi, I'm Ashok Neupane</h1>
     <h2>Full Stack MERN Developer from <em>Mindrisers Inc</em></h2>
     <h3><strong>From Kathmandu, Nepal</strong></h3>
-    <p>
-      <strong><a href="contact.html" target="_blank">Contact Me</a></strong>
-    </p>
+ <em>Note:For the practice purpose; This website is  made of HTML,CSS and Vanilla JavaScript only</em>
     <hr />
 
     <div style="text-align: center">
@@ -201,55 +36,28 @@
         "
       >
         <em
-          >Learn MERN, it's the future of the World Wide Web;<br /><br />Starting
-          from the ground up:<br /><br />
-          1. HTML
-          <br /><br />
-          2. CSS
+          >HTML,CSS and JavaScript are the core technologies of world wide web;<br /><br />For being a good developer anyone have to start from scratch:<br />
+           <ul>
+            HTML
+          </ul>
+          <ul>CSS</ul>
+          <ul>JavaScript</ul>
+          
         </em>
       </span>
     </div>
     <hr />
+    <br /><br />
 
-    <div style="text-align: center; font-size: 1.4rem; font-weight: bold">
-      Days of CSS practice:
+    <div class="lessons-container">
+      <a href="./day1.html">
+      <span class="html-lessons">HTML Lessons Practiced</span>
+    </a>
+      <span class="css-lessons">CSS Lessons Practiced</span>
+      <span class="js-lessons">JS Lessons Practiced</span>
     </div>
 
-    <div style="text-align: center; margin-top: 20px">
-      <a
-        href="./day1.html"
-        style="
-          display: inline-block;
-          font-size: 1.4rem;
-          font-weight: bold;
-          margin: 0 10px;
-          background-color: green;
-          color: rgb(240, 243, 240);
-          cursor: pointer;
-          padding: 1.5rem;
-          border-radius: 50px;
-          text-decoration: none;
-        "
-        >Click For Day 1</a
-      >
-      <a
-        href=""
-        style="
-          display: inline-block;
-          font-size: 1.4rem;
-          font-weight: bold;
-          margin: 0 10px;
-          background-color: rgb(66, 0, 128);
-          color: rgb(240, 243, 240);
-          cursor: pointer;
-          padding: 1.5rem;
-          margin-top: 6px;
-          border-radius: 50px;
-          text-decoration: none;
-        "
-        >Click For Day 2</a
-      >
-    </div>
+    <br /><br /><br /><br />
 
     <br />
     <div class="section">
@@ -275,7 +83,7 @@
     </div>
 
     <div class="section">
-      <h3 style="text-align: center;">My Experience</h3>
+      <h3 style="text-align: center">My Experience</h3>
       <table class="experience-table">
         <tr>
           <th>Subject</th>
@@ -313,8 +121,10 @@
     </div>
 
     <div class="marksheet-section">
-      <h3 style="text-align: center;color:wheat">My MarkSheet for MERN STACK:</h3>
-      <div style="overflow-x: auto;">
+      <h3 style="text-align: center; color: wheat">
+        My MarkSheet for MERN STACK:
+      </h3>
+      <div style="overflow-x: auto">
         <table class="marksheet-table">
           <thead>
             <tr>

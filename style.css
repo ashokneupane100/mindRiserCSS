@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(250, 252, 252);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin: 20px 0;
+  }
+  
+  h2,
+  h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  p {
+    font-size: 1em;
+    margin: 10px 0;
+  }
+  
+  hr {
+    border: none;
+    height: 2px;
+    background-color: rgb(75, 74, 74);
+    margin: 20px auto;
+    max-width: 50%;
+  }
+  
+  .section {
+    background-color: rgb(159, 159, 206);
+    padding: 20px;
+    border-radius: 50px;
+    margin-bottom: 40px;
+  }
+  
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .section-content {
+      flex-direction: row;
+    }
+  }
+  
+  .section-content > div {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hobbies ul,
+  .routine ul {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style: none;
+  }
+  
+  .hobbies ul li,
+  .routine ul li {
+    padding-left: 30px;
+    position: relative;
+  }
+  
+  .experience-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: black;
+  }
+  
+  .experience-table th,
+  .experience-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgb(75, 74, 74);
+    color: rgb(218, 214, 5);
+    font-size: 1.2rem;
+  }
+  
+  .experience-table th {
+    background-color: rgb(63, 62, 62);
+    border-radius: 40px;
+  }
+  
+  .marksheet-section {
+    width: 100%;
+    background-color: rgb(12, 80, 12);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+  
+  .marksheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .marksheet-table th,
+  .marksheet-table td {
+    padding: 12px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  .marksheet-table th {
+    background-color: rgb(6, 49, 1);
+  }
+  
+  footer {
+    background-color: rgb(48, 47, 47);
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Updated CSS for fully rounded and responsive lessons */
+  .lessons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .html-lessons,
+  .css-lessons,.js-lessons {
+    color: white;
+    padding: 1em; /* Adjust padding for better centering */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-size: 2.2rem; /* Default font size */
+  }
+  
+  .html-lessons {
+    background-color: blue; /* HTML Lessons - Blue */
+  }
+  
+  .css-lessons {
+    background-color: rgb(2, 102, 2); /* CSS Lessons - Red */
+  }
+
+  .js-lessons {
+    background-color: rgb(119, 91, 0); /* CSS Lessons - Red */
+  }
+  
+  @media (max-width: 768px) {
+    .lessons-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .html-lessons,
+    .css-lessons,.js-lessons {
+      width: 120px;
+      height: 120px;
+      font-size: 1.5rem; /* Larger font size for smaller screens */
+      line-height: 1.5rem;
+      margin: 10px auto;
+    }
+  }
+  

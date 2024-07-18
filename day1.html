@@ -1,260 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 1 of CSS:Search The Appropriate Properties</title>
-  <style>
-    /* General styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ashok Neupane, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This page contains all the things about HTML, each thing and everything from the ground up."
+    />
+    <link
+      rel="icon"
+      href="./assets/images/Nepal-Flag-icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <title>HTML Learning</title>
+  </head>
+  <body>
+    <h2>* HTML Learning from the absolute basics; so won't be leaving any traces left to learn. <em>Learn From the absolute scratch and go up and up until MASTERING MERN STACK</em></h2>
+    <h2>Basic HTML</h2>
+    <h2>FavIcons-Nepali Flag put as the FAVICON</h2>
+    <h3>Header Management</h3>
 
-    /* Container styles */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.75rem;
-    }
+    <hr />
+    <h1>Text Basics</h1>
 
-    /* Media query for larger screens */
-    @media (min-width: 768px) {
-      .container {
-        flex-direction: row;
-      }
-    }
+    <h1>h1 Tags are the largest texts.</h1>
+    <h2>h2 Tags are little bit smaller</h2>
+    <h3>h3 Tags are little bit smaller</h3>
+    <h4>h4 Tags are little bit smaller</h4>
+    <h5>h5 Tags are little bit smaller</h5>
+    <h6>h6 Tags the smallest</h6>
 
-    /* Utility classes */
-    .m-5 {
-      margin: 1.25rem;
-    }
+    <h3>Headers also give semantic meaning.</h3>
 
-    .gap-8 {
-      gap: 2rem;
-    }
+    <hr />
 
-    .gap-7 {
-      gap: 1.75rem;
-    }
+    <h1>h1 Tags are the largest texts.</h1>
+    <h2>h2 Tags are little bit smaller</h2>
+    <h3>h3 Tags are little bit smaller</h3>
+    <h4>h4 Tags are little bit smaller</h4>
+    <h5>h5 Tags are little bit smaller</h5>
+    <h6>h6 Tags the smallest</h6>
 
-    .mt-8 {
-      margin-top: 2rem;
-    }
+    <h3>Headers also give semantic meaning.</h3>
 
-    .flex {
-      display: flex;
-    }
+    <p>
+      Let me tell <br />
+      ....how I learned and mastered about web developemnet from the absolute
+      basics. <br />
+      ... I use resources from mozilla development network.
+    </p>
 
-    .flex-col {
-      flex-direction: column;
-    }
+    <h2>I am also planning for a vacation.</h2>
+    <p>
+      I have been working really hard
+      <em> and really need a great vacation.</em> <br />
+      ...I live in Kathmandu , so I want to the mountain hiking.
+    </p>
 
-    .flex-wrap {
-      flex-wrap: wrap;
-    }
+    <h3>Places I like to Visit:</h3>
+    <p>I heard good things about mount everest basecamp.</p>
 
-    .items-center {
-      align-items: center;
-    }
+    <h3>Places I want to avoid:</h3>
+    <p>
+      In this summer time,
+      <strong>
+        I won't go to terai because it would be very hot and infested with
+        mosquitoes.</strong
+      >
+    </p>
 
-    .gap-2 {
-      gap: 0.5rem;
-    }
+    <h2>& nbsp helps to give space ; it is non breaking space.</h2>
+    <h3>
+      Lorem ipsum dolor &nbsp; &nbsp; sit amet, consectetur adipisicing elit.
+      Animi labore nisi fugiat voluptatem accusantium numquam facilis id
+      temporibus. Dignissimos fugiat fugit suscipit sunt, ad laboriosam
+      laudantium veritatis exercitationem! Quos, iusto!
+    </h3>
 
-    .w-full {
-      width: 100%;
-    }
+    <h2>We can give Abbreviations easily, it acts as the tooltip.</h2>
+    <abbr title="Mozilla Developer Netword">MDN</abbr>
 
-    .w-5 {
-      width: 1.25rem;
-    }
+    <p>I've heard good things about going to mount everest.</p>
 
-    .border {
-      border: 1px solid #ccc;
-    }
+    <address>
+      <strong>Address:</strong> <br />
+      1234, Kathmandu, Nepal <br />
+      <a href="mailto:abc@xyz.com">abc@xyz.com</a>
+      1234, Kathmandu, Nepal <br />
+      <a href="mailto:info@mdn.com">info@mdn.com</a>
+    </address>
 
-    .rounded-lg {
-      border-radius: 0.5rem;
-    }
+    <!---TODO: ADD MORE PLACES LATER--->
 
-    .p-3 {
-      padding: 0.75rem;
-    }
-
-    .text-2xl {
-      font-size: 1.5rem;
-    }
-
-    .font-bold {
-      font-weight: 700;
-    }
-
-    .font-semibold {
-      font-weight: 600;
-    }
-
-    .bg-slate-700 {
-      background-color: #2d3748;
-    }
-
-    .text-slate-800 {
-      color: #2d3748;
-    }
-
-    .text-white {
-      color: white;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 1rem;
-    }
-
-    .image-container img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px; /* Rounded corners for a modern look */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    }
-
-    .footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 2rem;
-      gap: 1rem;
-    }
-
-    .footer a img {
-      width: 32px;
-      height: 32px;
-      transition: transform 0.3s ease; /* Smooth hover effect */
-    }
-
-    .footer a img:hover {
-      transform: scale(1.2); /* Scale up on hover */
-    }
-
-    .copyright {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    /* Custom dropdown styles */
-    select#sort_order {
-      padding: 0.35rem; /* Increased padding */
-      font-size: 1rem; /* Increased font size */
-      background-color: rgb(187, 236, 236); /* Cyan background color */
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      color: #333;
-      width: 100%; /* Full width */
-    }
-  </style>
-</head>
-<body>
-  <header class="center">
-    <h1>Search Your Favorite Homes in Kathmandu Valley</h1>
-  </header>
-
-  <div class="image-container">
-    <img src="https://media.istockphoto.com/id/1885415453/photo/house-symbol-on-speech-bubble.jpg?s=1024x1024&w=is&k=20&c=fnUTbqSk79AlTsNjWAyi3yyw_Fa6xkMIjSHwgIE0l3o=" alt="house" width="500px" height="500px"/>
-  </div>
-
-  <div class="container gap-7">
-    <div class="container m-5">
-      <form class="flex flex-col gap-8">
-        <div class="flex items-center gap-2 mt-8">
-          <label for="search" class="whitespace-nowrap font-semibold">Search Term</label>
-          <input type="text" id="search" placeholder="Search your properties ..." class="border rounded-lg p-3 w-full">
-        </div>
-
-        <div class="flex gap-2 flex-wrap items-center">
-          <label class="font-bold">Type:</label>
-          <div class="flex gap-2">
-            <input type="checkbox" id="type-all" class="w-5">
-            <span class="font-bold">Rent & Sale</span>
-          </div>
-          <div class="flex gap-2">
-            <input type="checkbox" id="type-rent" class="w-5">
-            <span class="font-bold">Rent</span>
-          </div>
-          <div class="flex gap-2">
-            <input type="checkbox" id="type-sale" class="w-5">
-            <span class="font-bold">Sale</span>
-          </div>
-          <div class="flex gap-2">
-            <input type="checkbox" id="type-offer" class="w-5">
-            <span class="font-bold">Offer</span>
-          </div>
-        </div>
-
-        <div class="flex gap-2 flex-wrap items-center">
-          <label class="font-bold">Amenities:</label>
-          <div class="flex gap-2">
-            <input type="checkbox" id="amenities-parking" class="w-5">
-            <span class="font-bold">Parking</span>
-          </div>
-          <div class="flex gap-2">
-            <input type="checkbox" id="amenities-furnished" class="w-5">
-            <span class="font-bold">Furnished</span>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <label class="font-bold">Sort:</label>
-          <select id="sort_order" class="border rounded-lg p-3">
-            <option value="price low to high">Price Low to High</option>
-            <option value="price high to low">Price High to Low</option>
-            <option value="latest">Latest Post</option>
-            <option value="oldest">Oldest Post</option>
-          </select>
-        </div>
-
-        <button class="bg-slate-700 text-2xl rounded-lg text-white p-3 cursor-pointer">
-            Search
-          </button>
-          
-      </form>
-    </div>
-
-    <div>
-      <h2 class="text-slate-800 text-2xl font-bold mt-8">
-        Searched Properties are Here:
-      </h2>
-      <!-- Placeholder for searched properties -->
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer">
-      <a href="https://www.facebook.com/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-      </a>
-      <a href="https://www.twitter.com/" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" alt="Twitter">
-      </a>
-    </div>
-    <div class="copyright">
-      &copy; 2024 Ashok Neupane; all rights reserved;
-    </div>
-  </footer>
-</body>
+    <hr />
+    &lt; &lt;&lt; &copy Ashok Neupane &gt; &gt;&gt;
+  </body>
 </html>
