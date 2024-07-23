@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .bx {
+    width: 40vw;
+    height: 30px;
+    border: 1px solid black;
+    margin: 5px;
+
+  }
+  
+  .bx1 {
+    background-color: rgb(47, 7, 194);
+    width:10%;
+
+  }
+  
+  .bx2 {
+    background-color: rgb(3, 90, 3);
+    width:50vw;
+  }
+  
+  .bx3 {
+     background-color:red;
+    width:100vw;
+    height:100vh;
+  }
+  
+  /* Inline Container - default block behavior */
+  .inline-container {
+    margin-bottom: 30px;
+  }
+  
+  /* Flex Container */
+  .flex-container {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  

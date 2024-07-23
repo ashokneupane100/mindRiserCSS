@@ -117,6 +117,7 @@ body {
     padding: 0;
     text-align: center;
     color: white;
+
   }
   
   .marksheet-table th,
@@ -195,6 +196,22 @@ body {
     .html-lessons,
     .css-lessons,.js-lessons {
       width: 120px;
+      height: 120px;
+      font-size: 1.5rem; /* Larger font size for smaller screens */
+      line-height: 1.5rem;
+      margin: 10px auto;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .lessons-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .html-lessons,
+    .css-lessons,.js-lessons {
+      width: 100%;
       height: 120px;
       font-size: 1.5rem; /* Larger font size for smaller screens */
       line-height: 1.5rem;
